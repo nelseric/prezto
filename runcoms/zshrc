@@ -10,4 +10,39 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+#fpath=(~/.zsh/completions $fpath)
+#autoload -Uz compinit && compinit
+
 # Customize to your needs...
+alias be='bundle exec'
+alias bet='bundle exec ruby -I test'
+alias bundle-reset='git checkout HEAD -- Gemfile.lock'
+
+alias npm-exec='PATH=$(npm bin):$PATH'
+alias ne=npm-exec
+alias heroset='heroku accounts:set'
+alias python='python3'
+alias pip='pip3'
+alias j='fasd_cd'
+alias ji='fasd_cd -i'
+
+alias eslint='ne eslint'
+
+function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
+
+BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
+alias colorfix="[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL"
+colorfix
+
+tab-color() {
+    echo -ne "\033]6;1;bg;red;brightness;$1\a"
+    echo -ne "\033]6;1;bg;green;brightness;$2\a"
+    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
+}
+tab-reset() {
+    echo -ne "\033]6;1;bg;*;default\a"
+}
+
+# Wrap git automatically by adding the following to ~/.zshrc:
+
+eval "$(hub alias -s)"
