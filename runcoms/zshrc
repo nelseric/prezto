@@ -25,7 +25,7 @@ alias python='python3'
 alias pip='pip3'
 alias j='fasd_cd'
 alias ji='fasd_cd -i'
-
+alias pd="php -S localhost:4000"
 alias eslint='ne eslint'
 
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
@@ -46,3 +46,5 @@ tab-reset() {
 # Wrap git automatically by adding the following to ~/.zshrc:
 
 eval "$(hub alias -s)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
