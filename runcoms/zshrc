@@ -13,6 +13,8 @@ fi
 #fpath=(~/.zsh/completions $fpath)
 #autoload -Uz compinit && compinit
 
+unalias ack
+
 # Customize to your needs...
 alias be='bundle exec'
 alias bet='bundle exec ruby -I test'
@@ -27,8 +29,10 @@ alias j='fasd_cd'
 alias ji='fasd_cd -i'
 alias pd="php -S localhost:4000"
 alias eslint='ne eslint'
-
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
+alias ngrok_load='launchctl load ~/Library/LaunchAgents/com.ngrok.client.plist'
+alias ngrok_unload='launchctl unload ~/Library/LaunchAgents/com.ngrok.client.plist'
+
 
 BASE16_SHELL="$HOME/.config/base16-shell/base16-tomorrow.dark.sh"
 alias colorfix="[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL"
@@ -42,6 +46,10 @@ tab-color() {
 tab-reset() {
     echo -ne "\033]6;1;bg;*;default\a"
 }
+
+
+NGROK_URL=$(ngrokurl)
+
 
 # Wrap git automatically by adding the following to ~/.zshrc:
 
