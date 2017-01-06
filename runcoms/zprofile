@@ -40,17 +40,18 @@ typeset -gU cdpath fpath mailpath path
 # cdpath=(
 #   $cdpath
 # )
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME=~/Library/Android/sdk
 export HOMEBREW_GITHUB_API_TOKEN=1621b3cc91abc4d1d938c6f19cd428c59102bb31
 export GOPATH=$HOME
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
   $GOPATH/bin
   $HOME/bin
+  /usr/local/Cellar/node/7.4.0/bin
+  ${ANDROID_HOME}/tools
+  ${ANDROID_HOME}/platform-tools
   $path
 )
 

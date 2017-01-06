@@ -15,6 +15,8 @@ fi
 
 unalias ack
 
+alias ag="ag --noheading"
+
 # Customize to your needs...
 alias be='bundle exec'
 alias bet='bundle exec ruby -I test'
