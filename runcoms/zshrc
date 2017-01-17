@@ -56,6 +56,6 @@ NGROK_URL=$(ngrokurl)
 
 # Wrap git automatically by adding the following to ~/.zshrc:
 
-eval "$(hub alias -s)"
+hash hub 2> /dev/null && eval "$(hub alias -s)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
