@@ -44,12 +44,14 @@ export ANDROID_HOME=~/Library/Android/sdk
 export HOMEBREW_GITHUB_API_TOKEN=1621b3cc91abc4d1d938c6f19cd428c59102bb31
 export GOPATH=$HOME
 
+node_path=$(dirname $(realpath $(which node)))
+
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
   $GOPATH/bin
   $HOME/bin
-  /usr/local/Cellar/node/7.4.0/bin
+  $node_path
   ${ANDROID_HOME}/tools
   ${ANDROID_HOME}/platform-tools
   $path
