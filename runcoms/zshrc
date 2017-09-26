@@ -14,7 +14,7 @@ fi
 #autoload -Uz compinit && compinit
 
 unalias ack
-
+unalias gs
 alias ag="ag --noheading"
 
 # Customize to your needs...
@@ -34,6 +34,10 @@ alias eslint='ne eslint'
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args "$@"; }
 alias ngrok_load='launchctl load ~/Library/LaunchAgents/com.ngrok.client.plist'
 alias ngrok_unload='launchctl unload ~/Library/LaunchAgents/com.ngrok.client.plist'
+
+alias heroku='TERM=xterm-256color heroku'
+
+alias gpr='git pull-request'
 
 
 BASE16_SHELL=$HOME/.config/base16-shell/
