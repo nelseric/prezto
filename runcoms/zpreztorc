@@ -43,6 +43,7 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'osx' \
   'ruby' \
+  'node' \
   'python' \
   'completion' \
   'syntax-highlighting' \

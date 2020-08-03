@@ -20,6 +20,8 @@ alias ag="ag --noheading"
 # Customize to your needs...
 alias be='bundle exec'
 alias bet='bundle exec ruby -I test'
+alias rc="bundle exec rails c"
+alias uc='bundle exec unicorn -c config/unicorn.rb --port 3000'
 alias bundle-reset='git checkout HEAD -- Gemfile.lock'
 alias low='nice -n20'
 alias npm-exec='PATH=$(npm bin):$PATH'
